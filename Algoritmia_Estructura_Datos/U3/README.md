@@ -1,4 +1,4 @@
-# Algoritmos de Ordenamiento y Estructuras de Datos Avanzadas - Unidad 3
+# Algoritmia y Estructura de Datos - Unidad 3
 
 Esta unidad introduce algoritmos de ordenamiento básicos y estructuras de datos de árbol (Árbol Binario de Búsqueda - BST) con ejemplos didácticos en Python.
 
