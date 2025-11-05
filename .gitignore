@@ -1,0 +1,5 @@
+# Omite __pycache__ directories sin importar su ubicación
+**/__pycache__/
+*.pyc
+# Omite archivos compilados de Python
+*.bin
