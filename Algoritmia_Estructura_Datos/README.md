@@ -6,3 +6,4 @@ Este repositorio contiene material didáctico y ejemplos de código para la asig
 
 1. [Unidad 1: Análisis y Diseño de Algoritmos](U1/)
 2. [Unidad 2: Estructuras de Datos y Algoritmos de Búsqueda](U2/)
+3. [Unidad 3: Algoritmos de Ordenamiento y Estructuras de Datos Avanzadas](U3/)
