@@ -46,7 +46,17 @@ class BST:
 
     def buscar(self, valor):
         # - Devolver el nodo que contiene `valor` o None si no existe.
-        pass
+        if self.raiz is None:
+            return None
+        return self._buscar(self.raiz, valor)
+
+    def _buscar(self, nodo, valor):
+        if nodo is None or nodo.valor == valor:
+            return nodo
+        if valor < nodo.valor:
+            return self._buscar(nodo.izquierda, valor)
+        else:
+            return self._buscar(nodo.derecha, valor)
 
     def eliminar(self, valor):
         # Casos a cubrir:
