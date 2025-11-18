@@ -59,12 +59,37 @@ class BST:
             return self._buscar(nodo.derecha, valor)
 
     def eliminar(self, valor):
+        # Definimos un método público para eliminar un nodo con el valor dado.
+        self.raiz = self._eliminar(self.raiz, valor)
+
+    def _eliminar(self, nodo, valor):
         # Casos a cubrir:
         # 1) Nodo hoja -> reemplazar por None
         # 2) Nodo con un hijo -> reemplazar por su hijo
         # 3) Nodo con dos hijos -> reemplazar por el sucesor (mínimo del subárbol
         # derecho) y eliminar ese sucesor.
-        pass
+        if nodo is None:
+            return nodo
+
+        if valor < nodo.valor:
+            nodo.izquierda = self._eliminar(nodo.izquierda, valor)
+        elif valor > nodo.valor:
+            nodo.derecha = self._eliminar(nodo.derecha, valor)
+        else:
+            # Nodo encontrado
+            if nodo.izquierda is None:
+                return nodo.derecha
+            elif nodo.derecha is None:
+                return nodo.izquierda
+
+            # Nodo con dos hijos: obtener el sucesor (mínimo del subárbol derecho)
+            sucesor = self.minimo(nodo.derecha)
+
+            nodo.valor = sucesor.valor  # type: ignore
+            nodo.derecha = self._eliminar(
+                nodo.derecha, sucesor.valor)  # type: ignore
+
+        return nodo
 
     def minimo(self, nodo):
         if nodo is None:

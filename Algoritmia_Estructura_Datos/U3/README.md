@@ -16,6 +16,8 @@ El material está pensado para uso en clase: incluye trazas impresas para seguir
 
   - Implementa inserción y utilidades de visualización (usa `rich` si está instalado,
     con fallback textual).
+  - Incluye método `buscar(valor)` para buscar nodos en el árbol, retornando el nodo o `None`.
+  - Incluye método `eliminar(valor)` para eliminar nodos del árbol, ajustando la estructura según los casos (hoja, un hijo, dos hijos).
 
 - `ordenamiento.py` — Módulo con algoritmos de ordenamiento didácticos.
 
